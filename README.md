@@ -1,6 +1,5 @@
-
-
 ## Developing
+
 Once you've created a project and installed dependencies with `pnpm install` start a development server:
 
 ```bash
@@ -11,6 +10,7 @@ pnpm run dev -- --open
 ```
 
 ## Deploying
+
 By default, this will also create a CNAME file that points to my domain, owenwang.dev. You can change this behavior in `gh-pages.js`
 
 ```bash
