@@ -1,11 +1,14 @@
 <script lang="ts">
+	import ToolTip from '$lib/components/tooltip/ToolTip.svelte';
+	import InlineTooltip from '$lib/components/tooltip/TooltipContainer.svelte';
 </script>
 
 <svelte:head>
 	<title>Owen Wang</title>
 </svelte:head>
 
-<main class="w-4/5 md:w-1/2 lg:w-1/3 mx-auto mt-4">
+<main class="w-4/5 md:w-1/2 lg:w-2/5 mx-auto my-12 flex flex-col gap-4">
+	<img src="/images/goofy.jpg" alt="Owen Wang sitting" class="w-1/2 mx-auto">
 	<h1 class="text-4xl text-center">Owen Wang</h1>
 	<div class="flex flex-col gap-y-2 mt-4">
 		<h2>Links</h2>
@@ -25,21 +28,19 @@
 			<li>
 				<a href="https://zyfo.ai" class="text-nowrap">
 					<span class="bg-gray-800 hover:bg-gray-600 rounded-full text-white py-1 px-4 group">
-						<span>
-							Zyfo<span
-								class="bg-gradient-to-tr from-rose-400 via-fuchsia-500 to-indigo-500 inline-block text-transparent bg-clip-text font-bold"
-								>.ai</span
-							>
-						</span>
+						Zyfo<span
+							class="bg-gradient-to-tr from-rose-400 via-fuchsia-500 to-indigo-500 inline-block text-transparent bg-clip-text font-bold"
+							>.ai</span
+						>
 					</span>
-					- AI Website Maker
 				</a>
+				- AI Website Maker
 			</li>
 			<li>
 				<a
 					href="https://owenwang.dev/Transcribe"
 					class="text-blue-500 hover:text-blue-700 hover:underline">Transcribe</a
-				> - Music Player Specialized for Transcription
+				> - Music Player for Transcription
 			</li>
 			<li>
 				<a
@@ -72,7 +73,11 @@
 				Piano
 				<ul class="list-disc ml-8">
 					<li>
-						Hall High School Concert Jazz Band 2023-2024
+						<a
+							href="https://www.hallhighjazz.com/"
+							class="text-blue-500 hover:text-blue-700 hover:underline"
+							>Hall High School Concert Jazz Band 2023-2024</a
+						>
 						<ul class="list-disc ml-8">
 							<li>
 								<a
@@ -112,11 +117,14 @@
 				Machine Learning
 				<ul class="list-disc ml-8">
 					<li>
-						<a
-							href="https://github.com/TSVRN9/BeginnerNeuralNetwork"
-							class="text-blue-500 hover:text-blue-700 hover:underline"
-							>Handwritten Digits Perceptron</a
-						>
+						<InlineTooltip>
+							<a
+								href="https://github.com/TSVRN9/BeginnerNeuralNetwork"
+								class="text-blue-500 hover:text-blue-700 hover:underline md:flex md:flex-row"
+								>Handwritten Digits Perceptron
+								<ToolTip>&nbsp;in Java!!! 😱</ToolTip>
+							</a>
+						</InlineTooltip>
 					</li>
 				</ul>
 			</li>

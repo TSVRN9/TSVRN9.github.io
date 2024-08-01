@@ -12,7 +12,7 @@ ghpages.publish(
 		if (err) {
 			console.error(err);
 		} else {
-			console.log('Published successfully' + (DOMAIN ? `to https://${DOMAIN}` : ''));
+			console.log('Published successfully' + (DOMAIN ? ` to https://${DOMAIN}` : ''));
 		}
 	}
 );
