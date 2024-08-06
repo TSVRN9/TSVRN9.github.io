@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let flareSize: number = 150;
+	export let flareSize: number = 300;
 	let xBg = -50,
 		yBg = -50;
 
@@ -23,14 +23,11 @@
 	role="presentation"
 >
 	<div
-		class="flare inset-0 absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"
-	></div>
-	<div
-		class="inset-1 absolute overflow-hidden"
+		class="flare inset-0 absolute opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none rounded-2xl"
 	>
-		<div
-			class="flare inset-0 absolute opacity-0 group-hover:opacity-50"
-		></div>
+		<div class="div inset-1 absolute overflow-hidden rounded-2xl group-hover:opacity-100">
+			<div class="inset-0 absolute opacity-10"></div>
+		</div>
 	</div>
 	<slot />
 </section>
@@ -39,7 +36,7 @@
 	.flare {
 		background-image: radial-gradient(
 			circle at center,
-			rgba(255, 255, 255, 0.2),
+			rgba(255, 255, 255, 1),
 			rgba(0, 0, 0, 0) 70%
 		);
 		background-repeat: no-repeat;
