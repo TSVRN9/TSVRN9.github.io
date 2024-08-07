@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ToolTip from '$lib/components/tooltip/ToolTip.svelte';
-	import InlineTooltip from '$lib/components/tooltip/TooltipContainer.svelte';
+	import TooltipContainer from '$lib/components/tooltip/TooltipContainer.svelte';
 </script>
 
 <svelte:head>
@@ -118,14 +118,14 @@
 					Machine Learning
 					<ul class="list-disc ml-8">
 						<li>
-							<InlineTooltip>
+							<TooltipContainer>
 								<a
 									href="https://github.com/TSVRN9/BeginnerNeuralNetwork"
 									class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline md:flex md:flex-row"
 									>Handwritten Digits Perceptron
 									<ToolTip>&nbsp;in Java!!! 😱</ToolTip>
 								</a>
-							</InlineTooltip>
+							</TooltipContainer>
 						</li>
 					</ul>
 				</li>
