@@ -17,13 +17,13 @@
 				<li>
 					<a
 						href="https://github.com/TSVRN9"
-						class="text-blue-500 hover:text-blue-700 hover:underline">Github</a
+						class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline">Github</a
 					>
 				</li>
 				<li>
 					<a
 						href="https://www.athletic.net/athlete/19025995/cross-country/high-school"
-						class="text-blue-500 hover:text-blue-700 hover:underline">Athletic.net</a
+						class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline">Athletic.net</a
 					>
 				</li>
 				<li>
@@ -40,13 +40,13 @@
 				<li>
 					<a
 						href="https://owenwang.dev/Transcribe"
-						class="text-blue-500 hover:text-blue-700 hover:underline">Transcribe</a
+						class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline">Transcribe</a
 					> - Music Player for Transcription
 				</li>
 				<li>
 					<a
 						href="https://owenwang.dev/SortingVisualizer"
-						class="text-blue-500 hover:text-blue-700 hover:underline">Sorting Visualizer</a
+						class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline">Sorting Visualizer</a
 					>
 				</li>
 			</ul>
@@ -76,28 +76,28 @@
 						<li>
 							<a
 								href="https://www.hallhighjazz.com/"
-								class="text-blue-500 hover:text-blue-700 hover:underline"
+								class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline"
 								>Hall High School Concert Jazz Band 2023-2024</a
 							>
 							<ul class="list-disc ml-8">
 								<li>
 									<a
 										href="https://archive.maherpublications.com/view/533822710/12/"
-										class="text-blue-500 hover:text-blue-700 hover:underline"
+										class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline"
 										>Downbeat Best High School Jazz Ensemble</a
 									>
 								</li>
 								<li>
 									<a
 										href="https://archive.maherpublications.com/view/533822710/32/"
-										class="text-blue-500 hover:text-blue-700 hover:underline"
+										class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline"
 										>Downbeat Best High School Latin Jazz Ensemble</a
 									>
 								</li>
 								<li>
 									<a
 										href="https://static1.squarespace.com/static/5d0943cc1685450001db8e42/t/65d67cbfe89abf7b01ff6dbb/1708555455774/2024+HIGH+SCHOOL+COMPETITION+RESULTS+PRESS+RELEASE.pdf"
-										class="text-blue-500 hover:text-blue-700 hover:underline"
+										class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline"
 									>
 										Charles Mingus Festival Outstanding Big Band</a
 									>
@@ -105,7 +105,7 @@
 								<li>
 									<a
 										href="https://static1.squarespace.com/static/5d0943cc1685450001db8e42/t/65d67cbfe89abf7b01ff6dbb/1708555455774/2024+HIGH+SCHOOL+COMPETITION+RESULTS+PRESS+RELEASE.pdf"
-										class="text-blue-500 hover:text-blue-700 hover:underline"
+										class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline"
 									>
 										Charles Mingus Festival Outstanding Rhythm Section: Big Band</a
 									>
@@ -121,7 +121,7 @@
 							<InlineTooltip>
 								<a
 									href="https://github.com/TSVRN9/BeginnerNeuralNetwork"
-									class="text-blue-500 hover:text-blue-700 hover:underline md:flex md:flex-row"
+									class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline md:flex md:flex-row"
 									>Handwritten Digits Perceptron
 									<ToolTip>&nbsp;in Java!!! 😱</ToolTip>
 								</a>
@@ -136,7 +136,7 @@
 						<li>
 							<a
 								href="https://github.com/TSVRN9/MinecraftManhunt"
-								class="text-blue-500 hover:text-blue-700 hover:underline">Minecraft Manhunt</a
+								class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline">Minecraft Manhunt</a
 							>
 						</li>
 					</ul>
@@ -147,7 +147,7 @@
 				<li>
 					Email: <a
 						href="mailto:contact-owen-wang.yojeg@aleeas.com"
-						class="text-blue-500 hover:text-blue-700 hover:underline"
+						class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 hover:underline"
 						>contact-owen-wang.yojeg@aleeas.com</a
 					>
 				</li>
