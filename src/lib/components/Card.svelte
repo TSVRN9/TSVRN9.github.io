@@ -1,5 +1,9 @@
 <script lang="ts">
 	export let flareSize: number = 300;
+	let className: string = '';
+	export { className as class };
+
+
 	let xBg = -50,
 		yBg = -50;
 
@@ -18,18 +22,18 @@
 
 <section
 	style="--x-bg:{xBg}px;--y-bg:{yBg}px;--flare-size:{flareSize}px;"
-	class="group rounded-2xl p-4 w-max relative overflow-hidden"
+	class="group rounded-2xl py-4 px-8 w-full relative overflow-hidden card-background transition-all"
 	on:mousemove={onMouseMove}
 	role="presentation"
 >
 	<div
 		class="flare inset-0 absolute opacity-0 group-hover:opacity-100 transition-opacity overflow-hidden duration-300 pointer-events-none rounded-2xl"
 	>
-		<div class="card-background div inset-[1px] absolute overflow-hidden rounded-2xl">
-			<div class="flare inset-0 absolute opacity-20"></div>
+		<div class="card-background-hover div inset-[1px] absolute transition-all overflow-hidden rounded-2xl">
+			<div class="flare inset-0 absolute opacity-20 transition-opacity"></div>
 		</div>
 	</div>
-	<div class="pointer-events-auto relative transition-transform group-hover:scale-95">
+	<div class="pointer-events-auto relative transition-all {className}">
 		<slot />
 	</div>
 </section>
@@ -50,6 +54,10 @@
 	}
 
 	.card-background {
-		background-color: rgb(22, 15, 32);
+		background-color: rgb(33, 17, 55);
+	}
+
+	.card-background-hover {
+		background-color: rgb(33, 17, 55);
 	}
 </style>
