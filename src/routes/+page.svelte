@@ -12,7 +12,7 @@
 
 <main class="dark:bg-black dark:text-white py-12">
 	<div class="w-4/5 md:w-1/2 lg:w-2/5 mx-auto flex flex-col gap-4">
-		<img src="/images/goofy.jpg" alt="Owen Wang sitting" class="w-1/2 mx-auto rounded-lg" />
+		<img src="/images/goofy.jpg" alt="Owen Wang sitting" class="md:w-1/2 mx-auto rounded-lg" />
 		<h1 class="text-4xl text-center">Owen Wang</h1>
 		<div class="flex items-center text-gray-500">
 			<div class="flex-1 border-gray-500 border-b-2 -mx-4 rounded-full"></div>
