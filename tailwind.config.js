@@ -1,9 +1,11 @@
 import colors from 'tailwindcss/colors';
 import defaultTheme from 'tailwindcss/defaultTheme';
-import tailwindAnimate from 'tailwindcss-animate';
+import animate from 'tailwindcss-animated';
+import intersect from 'tailwindcss-intersect';
 
 /** @type {import('tailwindcss').Config} */
 export default {
+    mode: 'jit',
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
@@ -19,6 +21,7 @@ export default {
 		}
 	},
 	plugins: [
-		tailwindAnimate
+		animate,
+		intersect
 	]
 };
