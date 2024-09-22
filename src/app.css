@@ -11,3 +11,9 @@
 		src: url(/fonts/poppins.woff2) format('woff2');
 	}
 }
+
+@layer utilities {
+	.debug {
+		@apply border-red-500 border-8
+	}
+}
