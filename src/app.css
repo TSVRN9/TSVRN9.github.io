@@ -3,17 +3,39 @@
 @tailwind utilities;
 
 @layer base {
-	@font-face {
-		font-family: 'Poppins';
-		font-style: normal;
-		font-weight: 400;
-		font-display: swap;
-		src: url(/fonts/poppins.woff2) format('woff2');
-	}
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/poppins.woff2) format('woff2');
+    }
 }
 
 @layer utilities {
-	.debug {
-		@apply border-red-500 border-8
-	}
+    .debug {
+        @apply border-red-500 border-4;
+    }
+
+    .debug-alt {
+        @apply border-blue-500 border-4;
+    }
+
+    .animate-floating {
+        animation-name: floating;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes floating {
+    0%,
+    100% {
+        transform: translateY(-10%);
+        animation-timing-function: ease-in-out;
+    }
+    50% {
+        transform: translateY(10%);
+        animation-timing-function: ease-in-out;
+    }
 }
