@@ -26,6 +26,13 @@
         animation-duration: 5s;
         animation-iteration-count: infinite;
     }
+
+    .animate-card-float {
+        animation-name: card-float;
+        animation-duration: 6s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
 }
 
 @keyframes floating {
@@ -37,5 +44,15 @@
     50% {
         transform: translateY(10%);
         animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes card-float {
+    0%,
+    100% {
+        transform: translateY(-8px) rotate(-0.5deg);
+    }
+    50% {
+        transform: translateY(8px) rotate(0.5deg);
     }
 }

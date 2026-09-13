@@ -1,6 +1,9 @@
 <script lang="ts">
     import Hero from '$lib/components/Hero.svelte';
     import HorizontalScroll from '$lib/components/HorizontalScroll.svelte';
+    import ProjectCard from '$lib/components/ProjectCard.svelte';
+    import Contact from '$lib/components/Contact.svelte';
+    import { projects } from '$lib/projects';
 </script>
 
 <svelte:head>
@@ -9,39 +12,24 @@
 
 <div class="flex flex-col gap-8 overflow-x-clip w-full">
     <Hero />
-    <HorizontalScroll vw={200}>
+    <HorizontalScroll vw={projects.length * 100}>
         <div
             class="w-screen text-4xl text-center py-16 intersect:animate-fade-down intersect:visible invisible"
             slot="sticky"
         >
-            <div class="animate-floating motion-safe:animate-none">About me...</div>
+            <div class="motion-safe:animate-floating motion-reduce:animate-none">Projects</div>
         </div>
-        <div class="rounded-xl flex flex-col justify-center md:gap-4 items-center text-center">
-            <enhanced:img
-                class="basis-1 w-1/4 rounded-2xl"
-                src="/static/images/running.jpg"
-                alt="Owen Wang running"
+        {#each projects as project, i}
+            <ProjectCard
+                index={i + 1}
+                title={project.title}
+                description={project.description}
+                tech={project.tech}
+                githubUrl={project.githubUrl}
+                liveUrl={project.liveUrl}
+                image={project.image}
             />
-            <h1>I do cross country!!!</h1>
-            <a
-                href="https://www.athletic.net/athlete/19025995/cross-country"
-                class="flex gap-2 justify-center items-center rounded-full bg-gray-200 hover:bg-gray-400"
-            >
-                <enhanced:img
-                    class="inline-block w-6 rounded-full"
-                    src="/static/images/a-net.png"
-                    alt="athletic.net logo"
-                />
-                <span>athletic.net</span>
-            </a>
-        </div>
-        <!-- <div>
-            <enhanced:img
-                class="basis-1 w-1/4 rounded-2xl"
-                src="/static/images/goofy.jpg"
-                alt="Placeholder"
-            />
-        </div> -->
+        {/each}
     </HorizontalScroll>
-    <div class="w-screen h-screen text-center content-center">HELLOOOO</div>
+    <Contact />
 </div>

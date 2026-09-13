@@ -8,9 +8,15 @@
     <div
         class="flex md:flex-row flex-col basis-full justify-center md:gap-8 items-center pt-16 mx-12"
     >
-        <div class="basis-4 flex flex-col text-nowrap">
-            <h2 class="ml-8 text-3xl">Hi I'm...</h2>
-            <h1 class="md:text-7xl text-5xl">Owen Wang</h1>
+        <div class="basis-4 flex flex-col">
+            <h2 class="ml-8 text-3xl text-nowrap">Hi I'm...</h2>
+            <h1 class="md:text-7xl text-5xl text-nowrap">Owen Wang</h1>
+            <p
+                class="ml-8 mt-2 max-w-sm text-lg text-gray-500 motion-safe:animate-fade-down motion-reduce:animate-none animate-once animate-duration-700 animate-delay-1000 animate-ease-out"
+            >
+                Sophomore at UMass Amherst interested in software engineering, machine learning,
+                systems, and cybersecurity.
+            </p>
         </div>
         <div
             class="lg:basis-1/3 md:basis-1/2 w-0 max-h-full rounded-3xl flex-shrink md:animate-fade-right animate-once -z-20"

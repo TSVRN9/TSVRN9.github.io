@@ -13,8 +13,10 @@
     $: widthPx = (vw / 100) * windowWidth;
     $: excessScroll = widthPx - windowWidth;
     $: trackHeightPx = widthPx + windowHeight;
-    $: if (track && widthPx) track.style.height = `${trackHeightPx}px`;
-    $: console.log({ height: track && track.style.height, vw, windowWidth, isSm });
+    $: if (track) {
+        track.style.height = $isSm && widthPx ? `${trackHeightPx}px` : '';
+        if (!$isSm && content) content.style.transform = '';
+    }
 
     onMount(() => {
         if (browser) {
@@ -27,6 +29,7 @@
         if (browser) {
             window.removeEventListener('scroll', onScroll);
             window.removeEventListener('resize', onResize);
+            if (scrollRafId !== null) cancelAnimationFrame(scrollRafId);
         }
     });
 
@@ -35,7 +38,19 @@
         windowHeight = window.innerHeight;
     }
 
+    let scrollRafId: number | null = null;
+
     function onScroll() {
+        if (scrollRafId !== null) return;
+        scrollRafId = requestAnimationFrame(() => {
+            scrollRafId = null;
+            applyScroll();
+        });
+    }
+
+    function applyScroll() {
+        if (!$isSm || !track || !content) return;
+
         const offsetTop = track.offsetTop;
         const scrollPx = clamp(window.scrollY - offsetTop, 0, excessScroll);
 
@@ -44,16 +59,28 @@
 </script>
 
 <div bind:this={track} class="w-screen m-0 gap-0">
-    <div class="sticky w-screen h-screen overflow-hidden top-0">
-        <div class="absolute top-0 w-auto h-auto">
+    <div class="relative w-screen top-0 sm:sticky sm:h-screen sm:overflow-hidden sm:flex sm:flex-col">
+        <div class="w-auto h-auto">
             <slot name="sticky" />
         </div>
         <div
             bind:this={content}
-            class="debug h-screen sm:flex justify-around items-center will-change-transform"
-            style={isSm ? `width: ${vw}vw` : `height: ${trackHeightPx}px; width: 100vw`}
+            class="hscroll-content flex flex-col sm:flex-1 items-center will-change-transform"
+            style={$isSm ? `width: ${vw}vw` : ''}
         >
             <slot />
         </div>
     </div>
 </div>
+
+<style>
+    @media (min-width: 640px) {
+        .hscroll-content {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 100vw;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+</style>
